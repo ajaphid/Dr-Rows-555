@@ -2,7 +2,7 @@
   "name": "dr-rows-555",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://ajaphid.github.io/dr-rows-555/",
+  "homepage": "https://ajaphid.github.io/Dr-Rows-555/",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
