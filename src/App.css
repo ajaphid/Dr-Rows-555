@@ -4,6 +4,12 @@
   --background-overlay: rgba(255, 255, 255, 0.8);
   --button-text-color: #FFF;
   --text-color: #6D4C41;
+  --header-font-size: 32px;
+  --subheader-font-size: 24px;
+  --button-font-size: 18px;
+  --button-padding: 15px 30px;
+  --button-radius: 5px;
+  --container-width: 90%;
 }
 
 body {
@@ -12,6 +18,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
   overflow: hidden; /* Prevent scrolling */
 }
 
@@ -27,34 +34,50 @@ body {
   position: relative;
 }
 
+.scrollable-content {
+  width: var(--container-width);
+  max-width: 1000px;
+  height: 100vh;
+  overflow-y: auto;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 .container {
   display: flex;
-  margin: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  min-height: 80vh;
+  width: 100%;
   text-align: center;
+  margin-top: 75px;
 }
 
 .header {
-  font-size: 32px;
+  font-size: var(--header-font-size);
   font-weight: bold;
   color: var(--secondary-color);
+  text-align: center;
+  width: 80%;
 }
 
 .subheader {
-  font-size: 24px;
+  font-size: var(--subheader-font-size);
   color: var(--secondary-color);
   margin-bottom: 20px;
+  text-align: center;
+  width: 80%;
 }
 
 .lotus {
   width: 150px;
   height: auto;
   display: block;
-  margin: auto;
+  margin: auto 0px;
 }
 
 .headshot {
@@ -77,15 +100,15 @@ body {
 .button {
   background-color: var(--primary-color);
   color: var(--button-text-color);
-  padding: 15px 30px;
+  padding: var(--button-padding);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--button-radius);
   margin: 10px 0;
   width: 80%;
   max-width: 300px; /* Ensure buttons don't stretch too wide */
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: var(--button-font-size);
   font-weight: 600;
   cursor: pointer;
 }
@@ -93,14 +116,14 @@ body {
 .button-fixed {
   background-color: var(--primary-color);
   color: var(--button-text-color);
-  padding: 15px 30px;
+  padding: var(--button-padding);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--button-radius);
   margin: 10px 0;
   width: 150px;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: var(--button-font-size);
   font-weight: 600;
   cursor: pointer;
 }
@@ -134,7 +157,7 @@ body {
 }
 
 .home-button {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
   background-color: var(--primary-color);
@@ -147,5 +170,5 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  z-index: 1000; /* Ensure the button is always on top */
 }
-

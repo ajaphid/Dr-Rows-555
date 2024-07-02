@@ -10,11 +10,11 @@ const BreatheScreen = () => {
   const intervalRef = useRef(null);
 
   const instructions = useMemo(() => [
-    'Inhale',
-    'Hold your breath',
-    'Exhale',
-    'Hold your breath',
-    'Breathe regularly',
+    'Inhale for 5 seconds',
+    'Hold your breath for 5 seconds',
+    'Exhale for 5 seconds',
+    'Hold your breath for 5 seconds',
+    'Breathe regularly for 5 seconds',
   ], []);
 
   useEffect(() => {
@@ -55,16 +55,18 @@ const BreatheScreen = () => {
   return (
     <div>
       <Link to="/" className="home-button">Home</Link>
-      <div className="container">
-        <h1 className="countdown">{countdown}</h1>
-        <h2 className="breathe-instruction">{instruction}</h2>
-        <div className="button-container">
-          <button className="button-fixed" onClick={toggleAnimation}>
-            {isAnimating ? 'Pause' : 'Play'}
-          </button>
-          <button className="button-fixed" onClick={resetAnimation}>
-            Reset
-          </button>
+      <div className="scrollable-content">
+        <div className="container">
+          <h1 className="countdown">{countdown}</h1>
+          <h2 className="breathe-instruction">{instruction}</h2>
+          <div className="button-container">
+            <button className="button-fixed" onClick={toggleAnimation}>
+              {isAnimating ? 'Pause' : 'Play'}
+            </button>
+            <button className="button-fixed" onClick={resetAnimation}>
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -72,4 +74,3 @@ const BreatheScreen = () => {
 };
 
 export default BreatheScreen;
-
