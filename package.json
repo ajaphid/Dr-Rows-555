@@ -2,11 +2,15 @@
   "name": "dr-rows-555",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://<username>.github.io/<repository>",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d web-build",
+    "build": "expo build:web"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
@@ -27,7 +31,9 @@
     "react-scripts": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "gh-pages": "^6.1.1"
   },
+  "homepage": "http://ajaphid.github.io/Dr-Rows-555",
   "private": true
 }
