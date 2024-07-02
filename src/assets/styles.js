@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     width: '100%',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Optional, for slight background overlay
   },
   header: {
     fontSize: 24,
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '100%',
     alignItems: 'center',
+    marginTop: 20,
   },
   button: {
     backgroundColor: '#D2691E',
@@ -55,6 +57,15 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 10,
     width: '80%',
+    alignItems: 'center',
+  },
+  buttonFixed: {
+    backgroundColor: '#D2691E',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 5,
+    marginVertical: 10,
+    width: 150, // Fixed width
     alignItems: 'center',
   },
   buttonText: {
@@ -84,6 +95,22 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#6D4C41',
     marginBottom: 10,
+  },
+  breatheContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  countdown: {
+    fontSize: 72,
+    color: '#6D4C41',
+    marginBottom: 20,
+  },
+  breatheInstruction: {
+    fontSize: 24,
+    color: '#6D4C41',
+    marginBottom: 40,
+    textAlign: 'center',
   },
 });
 
