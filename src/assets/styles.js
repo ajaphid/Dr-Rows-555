@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     width: '100%',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Optional, for slight background overlay
   },
   header: {
     fontSize: 24,
