@@ -15,7 +15,7 @@ const BreatheScreen = () => {
     'Exhale',
     'Hold your breath',
     'Breathe regularly',
-    ], []);
+  ], []);
 
   useEffect(() => {
     if (isAnimating) {
@@ -53,20 +53,23 @@ const BreatheScreen = () => {
   };
 
   return (
-    <div className="container">
+    <div>
       <Link to="/" className="home-button">Home</Link>
-      <h1>{countdown}</h1>
-      <h2>{instruction}</h2>
-      <div className="button-container">
-        <button className="button-fixed" onClick={toggleAnimation}>
-          {isAnimating ? 'Pause' : 'Play'}
-        </button>
-        <button className="button-fixed" onClick={resetAnimation}>
-          Reset
-        </button>
+      <div className="container">
+        <h1 className="countdown">{countdown}</h1>
+        <h2 className="breathe-instruction">{instruction}</h2>
+        <div className="button-container">
+          <button className="button-fixed" onClick={toggleAnimation}>
+            {isAnimating ? 'Pause' : 'Play'}
+          </button>
+          <button className="button-fixed" onClick={resetAnimation}>
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default BreatheScreen;
+
