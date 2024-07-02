@@ -8,7 +8,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Dr-Rows-555-OFFICIAL">
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomeScreen />} />
