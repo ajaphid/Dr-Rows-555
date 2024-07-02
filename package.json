@@ -29,5 +29,6 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
+  "homepage": "http://ajaphid.github.io/Dr-Rows-555",
   "private": true
 }
