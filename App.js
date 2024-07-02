@@ -1,23 +1,37 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import HomeScreen from './src/pages/HomeScreen';
-import BreatheScreen from './src/pages/BreatheScreen';
-import TutorialScreen from './src/pages/TutorialScreen';
-import AboutDrRowScreen from './src/pages/AboutDrRowScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './src/screens/HomeScreen';
+import AboutScreen from './src/screens/AboutScreen';
+import BreatheScreen from './src/screens/BreatheScreen';
+import LearnScreen from './src/screens/LearnScreen';
 
 const Stack = createStackNavigator();
 
-export default function App() {
+const linking = {
+  prefixes: ['http://localhost:19006'],
+  config: {
+    screens: {
+      Home: '',
+      About: 'about',
+      Breathe: 'breathe',
+      Learn: 'learn',
+    },
+  },
+};
+
+const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
-        <Stack.Screen name="Breathe" component={BreatheScreen} options={{ title: 'Breathe' }} />
-        <Stack.Screen name="Tutorial" component={TutorialScreen} options={{ title: 'Tutorial' }} />
-        <Stack.Screen name="About" component={AboutDrRowScreen} options={{ title: 'About Dr. Row' }} />
+    <NavigationContainer linking={linking}>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+        <Stack.Screen name="Breathe" component={BreatheScreen} />
+        <Stack.Screen name="Learn" component={LearnScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
+export default App;
