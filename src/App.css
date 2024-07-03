@@ -1,6 +1,7 @@
 :root {
   --primary-color: #D2691E;
   --secondary-color: #6D4C41;
+  --hold-color: #FFCC00;
   --background-overlay: rgba(255, 255, 255, 0.8);
   --button-text-color: #FFF;
   --text-color: #6D4C41;
@@ -172,4 +173,61 @@ body {
   font-weight: 600;
   cursor: pointer;
   z-index: 1000; /* Ensure the button is always on top */
+}
+
+@keyframes breatheIn {
+  0% { transform: scale(1); background-color: var(--primary-color); }
+  100% { transform: scale(1.2); background-color: var(--primary-color); }
+}
+
+@keyframes breatheOut {
+  0% { transform: scale(1.2); background-color: var(--hold-color); }
+  100% { transform: scale(1); background-color: var(--hold-color); }
+}
+
+@keyframes holdIn {
+  0% { background-color: var(--primary-color); }
+  100% { background-color: var(--hold-color); }
+}
+
+@keyframes holdOut {
+  0% { background-color: var(--hold-color); }
+  100% { background-color: var(--primary-color); }
+}
+
+@keyframes breatheRegular {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin: 20px auto;
+  /* transition: background-color 1s ease; */
+}
+
+.breatheIn {
+  animation: breatheIn 5s linear forwards;
+}
+
+.breatheOut {
+  animation: breatheOut 5s linear forwards;
+}
+
+.holdIn {
+  animation: holdIn 5s linear forwards;
+  transform: scale(1.2);
+}
+
+.holdOut {
+  animation: holdOut 5s linear forwards;
+  transform: scale(1.0);
+}
+
+.breatheRegular {
+  animation: breatheRegular 2.5s linear infinite;
 }
