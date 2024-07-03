@@ -11,6 +11,8 @@
   --button-padding: 15px 30px;
   --button-radius: 5px;
   --container-width: 90%;
+  --background-color-1: rgba(210, 105, 30, 0.5);
+  --background-color-2: rgba(210, 105, 30, 0.7);
 }
 
 body {
@@ -177,11 +179,11 @@ body {
 
 @keyframes breatheIn {
   0% { transform: scale(1); background-color: var(--primary-color); }
-  100% { transform: scale(1.2); background-color: var(--primary-color); }
+  100% { transform: scale(1.5); background-color: var(--primary-color); }
 }
 
 @keyframes breatheOut {
-  0% { transform: scale(1.2); background-color: var(--hold-color); }
+  0% { transform: scale(1.5); background-color: var(--hold-color); }
   100% { transform: scale(1); background-color: var(--hold-color); }
 }
 
@@ -197,18 +199,18 @@ body {
 
 @keyframes breatheRegular {
   0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
 
 .circle {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: var(--primary-color);
   margin: 20px auto;
-  /* transition: background-color 1s ease; */
-}
+  transition: background-color 1s ease;
+ }
 
 .breatheIn {
   animation: breatheIn 5s linear forwards;
@@ -220,7 +222,7 @@ body {
 
 .holdIn {
   animation: holdIn 5s linear forwards;
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .holdOut {
@@ -230,4 +232,4 @@ body {
 
 .breatheRegular {
   animation: breatheRegular 2.5s linear infinite;
-}
+} 
