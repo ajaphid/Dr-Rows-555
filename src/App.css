@@ -234,20 +234,25 @@ body {
 
 .breatheIn {
   animation: breatheIn 5s linear forwards;
+  animation-play-state: running;
 }
 
 .breatheOut {
   animation: breatheOut 5s linear forwards;
+  animation-play-state: running;
 }
 
 .holdIn {
   animation: holdIn 5s linear forwards;
+  animation-play-state: running;
 }
 
 .holdOut {
   animation: holdOut 5s linear forwards;
+  animation-play-state: running;
 }
 
 .breatheRegular {
   animation: breatheRegular 2.5s linear infinite;
+  animation-play-state: running;
 }

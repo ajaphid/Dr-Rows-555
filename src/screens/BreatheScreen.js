@@ -57,6 +57,9 @@ const BreatheScreen = () => {
       });
     }
     setIsAnimating(!isAnimating);
+    animationRef.current.forEach(circle => {
+      circle.style.animationPlayState = isAnimating ? 'paused' : 'running';
+    });
   };
 
   const resetAnimation = () => {
@@ -67,6 +70,7 @@ const BreatheScreen = () => {
     setInstruction('Press Play to start');
     animationRef.current.forEach(circle => {
       circle.className = 'circle';
+      circle.style.animationPlayState = 'running'; // Ensure it starts in running state
     });
   };
 
@@ -74,6 +78,7 @@ const BreatheScreen = () => {
     if (step === 0 && countdown === 5 && !isAnimating) {
       animationRef.current.forEach(circle => {
         circle.className = 'circle';
+        circle.style.animationPlayState = 'running'; // Ensure it starts in running state
       });
     }
   }, [step, countdown, isAnimating]);
@@ -84,7 +89,7 @@ const BreatheScreen = () => {
       <div className="scrollable-content">
         <div className="container">
           <div className="flower">
-            {[...Array(8)].map((_, i) => (
+            {[...Array(6)].map((_, i) => (
               <div
                 key={i}
                 ref={el => animationRef.current[i] = el}
