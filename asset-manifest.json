@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Dr-Rows-555-OFFICIAL/static/css/main.96220ab2.css",
-    "main.js": "/Dr-Rows-555-OFFICIAL/static/js/main.357716ff.js",
+    "main.css": "/Dr-Rows-555-OFFICIAL/static/css/main.89a62c4c.css",
+    "main.js": "/Dr-Rows-555-OFFICIAL/static/js/main.8ca4cca6.js",
     "static/js/453.8ef0b6b0.chunk.js": "/Dr-Rows-555-OFFICIAL/static/js/453.8ef0b6b0.chunk.js",
     "static/media/tutorial-video.mp4": "/Dr-Rows-555-OFFICIAL/static/media/tutorial-video.c65bc68dffa39862bfa1.mp4",
     "static/media/dr_row_headshot.png": "/Dr-Rows-555-OFFICIAL/static/media/dr_row_headshot.d4f53d58e4b47d28ee9a.png",
     "static/media/lotus.png": "/Dr-Rows-555-OFFICIAL/static/media/lotus.797c742963b8ac647481.png",
     "index.html": "/Dr-Rows-555-OFFICIAL/index.html",
-    "main.96220ab2.css.map": "/Dr-Rows-555-OFFICIAL/static/css/main.96220ab2.css.map",
-    "main.357716ff.js.map": "/Dr-Rows-555-OFFICIAL/static/js/main.357716ff.js.map",
+    "main.89a62c4c.css.map": "/Dr-Rows-555-OFFICIAL/static/css/main.89a62c4c.css.map",
+    "main.8ca4cca6.js.map": "/Dr-Rows-555-OFFICIAL/static/js/main.8ca4cca6.js.map",
     "453.8ef0b6b0.chunk.js.map": "/Dr-Rows-555-OFFICIAL/static/js/453.8ef0b6b0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96220ab2.css",
-    "static/js/main.357716ff.js"
+    "static/css/main.89a62c4c.css",
+    "static/js/main.8ca4cca6.js"
   ]
 }
