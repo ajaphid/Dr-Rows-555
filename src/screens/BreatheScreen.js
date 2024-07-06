@@ -71,7 +71,7 @@ const BreatheScreen = () => {
   }, [step, countdown, isAnimating]);
 
   return (
-    <div>
+    <div className="page-container">
       <Link to="/" className="home-button">Home</Link>
       <div className="scrollable-content">
         <div className="container">

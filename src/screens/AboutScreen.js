@@ -5,7 +5,7 @@ import DrRowHeadshot from '../assets/images/dr_row_headshot.png';
 
 const AboutScreen = () => {
   return (
-    <div>
+    <div className="page-container">
       <Link to="/" className="home-button">Home</Link>
       <div className="scrollable-content">
         <div className="container">

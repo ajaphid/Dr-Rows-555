@@ -5,7 +5,7 @@ import TutorialVideo from '../assets/videos/tutorial-video.mp4';
 
 const LearnScreen = () => {
   return (
-    <div>
+    <div className="page-container">
       <Link to="/" className="home-button">Home</Link>
       <div className="scrollable-content">
         <div className="container">
