@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/Dr-Rows-555-OFFICIAL/static/css/main.6334c3e9.css",
-    "main.js": "/Dr-Rows-555-OFFICIAL/static/js/main.9ac3a45b.js",
-    "static/js/453.8ef0b6b0.chunk.js": "/Dr-Rows-555-OFFICIAL/static/js/453.8ef0b6b0.chunk.js",
+    "main.css": "/Dr-Rows-555-OFFICIAL/static/css/main.fef753a8.css",
+    "main.js": "/Dr-Rows-555-OFFICIAL/static/js/main.7cfe760d.js",
     "static/media/tutorial-video.mp4": "/Dr-Rows-555-OFFICIAL/static/media/tutorial-video.c65bc68dffa39862bfa1.mp4",
     "static/media/dr_row_headshot.png": "/Dr-Rows-555-OFFICIAL/static/media/dr_row_headshot.d4f53d58e4b47d28ee9a.png",
     "static/media/lotus.png": "/Dr-Rows-555-OFFICIAL/static/media/lotus.797c742963b8ac647481.png",
     "index.html": "/Dr-Rows-555-OFFICIAL/index.html",
-    "main.6334c3e9.css.map": "/Dr-Rows-555-OFFICIAL/static/css/main.6334c3e9.css.map",
-    "main.9ac3a45b.js.map": "/Dr-Rows-555-OFFICIAL/static/js/main.9ac3a45b.js.map",
-    "453.8ef0b6b0.chunk.js.map": "/Dr-Rows-555-OFFICIAL/static/js/453.8ef0b6b0.chunk.js.map"
+    "main.fef753a8.css.map": "/Dr-Rows-555-OFFICIAL/static/css/main.fef753a8.css.map",
+    "main.7cfe760d.js.map": "/Dr-Rows-555-OFFICIAL/static/js/main.7cfe760d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6334c3e9.css",
-    "static/js/main.9ac3a45b.js"
+    "static/css/main.fef753a8.css",
+    "static/js/main.7cfe760d.js"
   ]
 }
