@@ -4,7 +4,7 @@ import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
 import BreatheScreen from './screens/BreatheScreen';
 import LearnScreen from './screens/LearnScreen';
-import './App.css';
+import './assets/styles/App.css';
 
 const App = () => {
   return (

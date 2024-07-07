@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../assets/styles/Home.css';
 import LotusLogo from '../assets/images/lotus.png';
 
 const HomeScreen = () => {

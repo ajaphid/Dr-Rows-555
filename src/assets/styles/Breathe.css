@@ -1,0 +1,119 @@
+/* BreatheScreen.css */
+
+@import './App.css'; /* Import common styles */
+
+.button-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--button-radius);
+  margin: 10px 0;
+  width: 80%;
+  max-width: 300px; /* Ensure buttons don't stretch too wide */
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-fixed {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--button-radius);
+  margin: 10px 0;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.flower {
+  position: relative;
+  width: var(--flower-size);
+  height: var(--flower-size);
+  margin: 0 auto;
+}
+
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--animation-duration) ease, background-color 1s ease;
+  opacity: var(--circle-opacity);
+}
+
+.circle:nth-child(1) { transform-origin: 50% 0; }  /* 0 degrees */
+.circle:nth-child(2) { transform-origin: 100% 25%; }  /* 60 degrees */
+.circle:nth-child(3) { transform-origin: 100% 75%; }  /* 120 degrees */
+.circle:nth-child(4) { transform-origin: 50% 100%; }  /* 180 degrees */
+.circle:nth-child(5) { transform-origin: 0 75%; }  /* 240 degrees */
+.circle:nth-child(6) { transform-origin: 0 25%; }  /* 300 degrees */
+
+.breatheIn {
+  animation: breatheIn var(--animation-duration) linear forwards;
+  animation-play-state: running;
+}
+
+.breatheOut {
+  animation: breatheOut var(--animation-duration) linear forwards;
+  animation-play-state: running;
+}
+
+.holdIn {
+  animation: holdIn var(--animation-duration) linear forwards;
+  animation-play-state: running;
+}
+
+.holdOut {
+  animation: holdOut var(--animation-duration) linear forwards;
+  animation-play-state: running;
+}
+
+.breatheRegular {
+  animation: breatheRegular calc(var(--animation-duration) / 2) linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes breatheIn {
+  0% { transform: translate(-50%, -50%) scale(1); background-color: var(--primary-color); }
+  100% { transform: translate(-50%, -50%) scale(2); background-color: var(--primary-color); }
+}
+
+@keyframes breatheOut {
+  0% { transform: translate(-50%, -50%) scale(2); background-color: var(--hold-color); }
+  100% { transform: translate(-50%, -50%) scale(1); background-color: var(--hold-color); }
+}
+
+@keyframes holdIn {
+  0% { transform: translate(-50%, -50%) scale(2); background-color: var(--primary-color); }
+  100% { transform: translate(-50%, -50%) scale(2); background-color: var(--hold-color); }
+}
+
+@keyframes holdOut {
+  0% { transform: translate(-50%, -50%) scale(1); background-color: var(--hold-color); }
+  100% { transform: translate(-50%, -50%) scale(1); background-color: var(--primary-color); }
+}
+
+@keyframes breatheRegular {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.4); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}

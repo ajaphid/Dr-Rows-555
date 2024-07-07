@@ -1,0 +1,19 @@
+/* HomeScreen.css */
+
+@import './App.css'; /* Import common styles */
+
+.header {
+  font-size: var(--header-font-size);
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-align: center;
+  width: 80%;
+}
+
+.subheader {
+  font-size: var(--subheader-font-size);
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  text-align: center;
+  width: 80%;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../assets/styles/About.css';
 import DrRowHeadshot from '../assets/images/dr_row_headshot.png';
 
 const AboutScreen = () => {

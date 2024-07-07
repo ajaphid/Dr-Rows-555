@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../assets/styles/Breathe.css';
 
 const BreatheScreen = () => {
   const [isAnimating, setIsAnimating] = useState(false);

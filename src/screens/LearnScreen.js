@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../assets/styles/Learn.css';
 import TutorialVideo from '../assets/videos/tutorial-video.mp4';
 
 const LearnScreen = () => {
@@ -14,13 +14,13 @@ const LearnScreen = () => {
             <source src={TutorialVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="steps-container">
-            <p className="step-text">1. Inhale for 5 seconds</p>
-            <p className="step-text">2. Hold your breath for 5 seconds</p>
-            <p className="step-text">3. Exhale for 5 seconds</p>
-            <p className="step-text">4. Hold your breath for 5 seconds</p>
-            <p className="step-text">5. Relax your breath; breathe normally for 5 seconds</p>
-          </div>
+          <ol className="steps-container">
+            <li className="step-text">Inhale for 5 seconds</li>
+            <li className="step-text">Hold your breath for 5 seconds</li>
+            <li className="step-text">Exhale for 5 seconds</li>
+            <li className="step-text">Hold your breath for 5 seconds</li>
+            <li className="step-text">Relax your breath; breathe normally for 5 seconds</li>
+          </ol>
         </div>
       </div>
     </div>

@@ -1,0 +1,29 @@
+/* LearnScreen.css */
+
+@import './App.css'; /* Import common styles */
+
+.video {
+  width: 90%;
+  height: 40%;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 0 20px;
+  text-align: left;
+  justify-content: center;
+}
+
+.step-text {
+  font-size: var(--text-font-size);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+
