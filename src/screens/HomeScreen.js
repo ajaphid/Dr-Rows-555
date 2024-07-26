@@ -1,24 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Home.css';
-import LotusLogo from '../assets/images/lotus.png';
 
 const HomeScreen = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="scrollable-content">
-      <h1 className="header">Experience Dr.Row’s 555 Breathing Technique</h1>
-      <img src={LotusLogo} alt="Lotus Logo" className="lotus" />
-      <h2 className="subheader">Dr.Row’s 555 is 5 steps, 5 seconds each, 5 times.</h2>
-      <div className="button-container">
-        <Link to="/breathe" className="button">Breathe the 555</Link>
-        <Link to="/learn" className="button">Learn the 555</Link>
-        <Link to="/about" className="button">About Dr.Row</Link>
+    <div className="app-container">
+      <div className="scrollable-content">
+        <div className="container">
+          <img
+            src={require('../assets/components/images/fixed logo 3.png')}
+            alt="Lotus"
+            className="header-image"
+          />
+          <h1 className="header home-header">Experience Dr. Row’s 555 Breathing Technique</h1>
+          <h2 className="subheader">Hello there & welcome. My name is Dr. Rowena Pingul-Ravano!</h2>
+          <p className="body-text main-text">
+            Dr. Row’s 555 is my meditation breathing technique. The 555 is a meditative technique that I created for myself and my patients. The 555 technique is meant to help calm your nervous system, help you recenter, and restore a sense of balance.
+          </p>
+          <p className="body-text separated-text">
+            Dr. Row's 555 is 5 steps, 5 seconds each, 5 times.
+          </p>
+          <button className="button navigation" onClick={() => navigate('/breathe')}>
+            Breathe the 555
+          </button>
+          <button className="button navigation" onClick={() => navigate('/learn')}>
+            Learn the 555
+          </button>
+          <button className="button navigation" onClick={() => navigate('/about')}>
+            About Dr. Row
+          </button>
+        </div>
       </div>
-      <p className="description">
-        Hello there & welcome! My name is Dr. Rowena Pingul-Ravano. Dr.Row’s 555 is my meditation breathing technique. It’s a technique I created for myself and my patients during COVID after taking the Yale University Happiness Course, “The Science of Well-being,” by Dr.Laurie Santos.
-      </p>
     </div>
   );
-};
+}
 
 export default HomeScreen;
+

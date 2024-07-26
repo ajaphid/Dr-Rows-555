@@ -1,19 +1,18 @@
-/* HomeScreen.css */
 
-@import './App.css'; /* Import common styles */
-
-.header {
-  font-size: var(--header-font-size);
-  font-weight: bold;
-  color: var(--secondary-color);
-  text-align: center;
-  width: 80%;
+.home-header{
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
-.subheader {
-  font-size: var(--subheader-font-size);
-  color: var(--secondary-color);
-  margin-bottom: 20px;
-  text-align: center;
-  width: 80%;
+.header-image {
+  width: 150px;
+  align-self: flex-start;
+  clip-path: polygon(0% 10%, 100% 10%, 100% 90%, 0% 90%);
+}
+
+.main-text {
+  margin-bottom: 0px;
+}
+
+.separated-text {
+  margin-top: 10px;
 }

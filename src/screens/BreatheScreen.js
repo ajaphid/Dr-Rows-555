@@ -1,6 +1,15 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Breathe.css';
+import HomeButton from '../assets/components/buttons/hom_button.png';
+
+import BreatheAudio from '../assets/components/audios/555audio1.m4a';
+
+import PauseButton from '../assets/components/buttons/pause_button.png';
+import PlayButton from '../assets/components/buttons/play_button.png';
+import RestartButton from '../assets/components/buttons/restart_button.png';
+import UnmuteButton from '../assets/components/buttons/volume_up.png';
+import MuteButton from '../assets/components/buttons/volume_down.png';
 
 const BreatheScreen = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -85,7 +94,9 @@ const BreatheScreen = () => {
 
   return (
     <div className="page-container">
-      <Link to="/" className="home-button">Home</Link>
+      <Link to="/" className="home-button">
+        <img src={HomeButton} alt="Home Button"/>
+      </Link>
       <div className="scrollable-content">
         <div className="container">
           <div className="flower">

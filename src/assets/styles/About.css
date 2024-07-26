@@ -1,21 +1,43 @@
-/* AboutScreen.css */
 
-@import './App.css'; /* Import common styles */
+@font-face {
+  font-family: 'Maragsa Display';
+  src: url('./fonts/Maragsâ/Maragsâ-Display.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .headshot {
   width: 200px;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 100%;
-  margin-bottom: 20px;
+  height: auto; 
+  margin: 75px auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.description {
-  font-size: var(--text-font-size);
-  color: var(--text-color);
-  margin-top: 20px;
-  padding: 0 20px;
-  text-align: left;
+.about-tile-container {
+  height: 100vh;
+  margin: 0px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 275px;
+}
+
+.about-tile-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.about-header {
+  font-family: 'Maragsa Display', serif;
 }

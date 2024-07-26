@@ -1,8 +1,29 @@
 /* App.css */
 
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('./fonts/Hanken_Grotesk/static/HankenGrotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk Bold';
+  src: url('./fonts/Hanken_Grotesk/static/HankenGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Maragsa Display';
+  src: url('./fonts/Maragsâ/Maragsâ-Display.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Global Variables */
 :root {
-  --primary-color: #D2691E;
+  --primary-color: #D66660;
   --secondary-color: #6D4C41;
   --hold-color: #FFCC00;
   --background-overlay: rgba(255, 255, 255, 0.8);
@@ -23,27 +44,25 @@
   --circle-opacity: 0.4;
   --flower-size: 200px;
   --animation-duration: 5s;
+  --animation-timing-function: ease-in-out;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  width: 100vw;
 }
 
 .app-container {
-  background: url('../images/background_img.png') no-repeat center center fixed;
   background-size: cover;
-  width: 100vw; /* Ensure it covers the full viewport width */
-  height: 100vh; /* Ensure it covers the full viewport height */
+  background: url('../components/backgrounds/Home_Background.png') no-repeat center center fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -52,8 +71,6 @@ body {
 }
 
 .scrollable-content {
-  width: var(--container-width);
-  height: 100vh;
   overflow-y: auto;
   margin: auto;
   flex: 1;
@@ -64,29 +81,58 @@ body {
 }
 
 .container {
-  width: var(--container-width);
+  width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: var(--container-margin-top);
-  margin-bottom: var(--container-margin-bottom);
+  align-items: flex-start; 
+  text-align: left; 
+  margin-top: 75px;
+  margin-bottom: 50px;
 }
 
 .home-button {
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: var(--primary-color);
-  color: var(--button-text-color);
-  padding: 10px 20px;
+  width: 50px; /* Adjust as necessary */
+  height: 50px; /* Adjust as necessary */
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5C4036;
+  text-align: left;
+  /* font-family: 'Hanken Grotesk', sans-serif; */
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.subheader {
+  font-size: 18px;
+  color: #963817;
+  text-align: left;
+  /* font-family: 'Hanken Grotesk', sans-serif; */
+  margin: 0px;
+}
+
+.body-text {
+  font-size: 16px;
+  color: #5C4036;
+  text-align: left;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.button navigation{
+  background-color: #D66660;
+  font-size: 18px;
+  font-weight: 600; /* Semi-bold weight */
   border: none;
   border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
   cursor: pointer;
-  z-index: 1000; /* Ensure the button is always on top */
+  font-family: 'Hanken Grotesk Bold', sans-serif;
+  text-align: center;
+  align-self: flex-start;
 }

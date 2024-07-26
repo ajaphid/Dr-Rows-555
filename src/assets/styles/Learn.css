@@ -1,12 +1,45 @@
-/* LearnScreen.css */
+@import './App.css'; 
 
-@import './App.css'; /* Import common styles */
+@font-face {
+  font-family: 'Maragsa Display';
+  src: url('./fonts/Maragsâ/Maragsâ-Display.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.learn-tile-container {
+  height: 100vh;
+  margin: 0px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 275px;
+}
+
+.learn-tile-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.learn-header {
+  font-family: 'Maragsa Display', serif;
+}
 
 .video {
-  width: 90%;
-  height: 40%;
+  width: 80%;
   background-color: #000;
-  margin-bottom: 20px;
+  margin: 75px auto;
+  display: block;
 }
 
 .steps-container {
@@ -16,14 +49,6 @@
   padding: 0 20px;
   text-align: left;
   justify-content: center;
-}
-
-.step-text {
-  font-size: var(--text-font-size);
-  color: var(--text-color);
-  margin-bottom: 10px;
-  width: 80%;
-  margin: 10px auto;
 }
 
 
