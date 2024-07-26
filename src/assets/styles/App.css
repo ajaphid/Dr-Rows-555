@@ -125,14 +125,3 @@ body {
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
-.button navigation{
-  background-color: #D66660;
-  font-size: 18px;
-  font-weight: 600; /* Semi-bold weight */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Hanken Grotesk Bold', sans-serif;
-  text-align: center;
-  align-self: flex-start;
-}

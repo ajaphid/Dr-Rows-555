@@ -154,20 +154,20 @@ const BreatheScreen = () => {
                 <img
                     src={isMuted ? UnmuteButton : MuteButton}
                     alt={isMuted ? "Unmute" : "Mute"}
-                    className="button"
+                    className="control-button"
                     onClick={toggleMute}
                 />
                 <img
                   src={isAnimating ? PauseButton : PlayButton}
                   alt={isAnimating ? "Pause" : "Play"}
-                  className="button"
+                  className="control-button"
                   id="main-button"
                   onClick={toggleAnimation}
                 />
                 <img
                   src={RestartButton}
                   alt="Reset"
-                  className="button"
+                  className="control-button"
                   onClick={resetAnimation}
                 />
               </div>
