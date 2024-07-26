@@ -25,6 +25,7 @@ const LearnScreen = () => {
             <li className="step-text">Relax your breath; breathe normally for 5 seconds</li>
           </ol>
           <p className="body-text">Repeat 5x, or until calm.</p>
+          <br></br><br></br>
         </div>
       </div>
     </div>

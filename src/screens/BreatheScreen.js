@@ -145,6 +145,7 @@ const BreatheScreen = () => {
               />
             ))}
           </div>
+          {/* <br></br> */}
           <div className="breathe-tile-container">
             <div className="breathe-tile-content">
               {/* <h1 className="countdown">{countdown}</h1> */}
@@ -172,6 +173,7 @@ const BreatheScreen = () => {
                 />
               </div>
               <p className='subtext'>Breathe the 555 method.</p>
+              {/* <br></br><br></br> */}
             </div>
           </div>
           

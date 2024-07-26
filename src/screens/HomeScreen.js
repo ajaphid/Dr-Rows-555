@@ -6,7 +6,7 @@ const HomeScreen = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="app-container">
+    <div className="page-container">
       <div className="scrollable-content">
         <div className="container">
           <img

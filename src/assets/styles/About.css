@@ -6,28 +6,26 @@
   font-style: normal;
 }
 
-
 .headshot {
   width: 200px;
   height: auto; 
   margin: 75px auto;
+  margin-bottom: 20px;
   display: block;
 }
 
 .about-tile-container {
-  height: 100vh;
   margin: 0px;
   margin-top: 10px;
   background-color: #f9f9f9;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding: 0px 20px;
   position: absolute;
   left: 0;
   right: 0;
-  top: 275px;
 }
 
 .about-tile-content {
