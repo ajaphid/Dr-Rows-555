@@ -8,8 +8,8 @@ import BreatheAudio from '../assets/components/audios/555audio1.m4a';
 import PauseButton from '../assets/components/buttons/pause_button.png';
 import PlayButton from '../assets/components/buttons/play_button.png';
 import RestartButton from '../assets/components/buttons/restart_button.png';
-import UnmuteButton from '../assets/components/buttons/volume_up.png';
-import MuteButton from '../assets/components/buttons/volume_down.png';
+import MuteButton from '../assets/components/buttons/volume_up.png';
+import UnmuteButton from '../assets/components/buttons/volume_down.png';
 
 const BreatheScreen = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -17,8 +17,10 @@ const BreatheScreen = () => {
   const [instruction, setInstruction] = useState('Press Play to start');
   const [step, setStep] = useState(0);
   const [repetition, setRepetition] = useState(1);
+  const [isMuted, setIsMuted] = useState(false);
   const intervalRef = useRef(null);
   const animationRef = useRef([]);
+  const audioRef = useRef(null);
 
   const instructions = useMemo(() => [
     'Inhale',
@@ -53,6 +55,10 @@ const BreatheScreen = () => {
                   return repetition + 1;
                 } else {
                   setIsAnimating(false);
+                  if (audioRef.current) {
+                    audioRef.current.pause();
+                    audioRef.current.currentTime = 0;
+                  }
                   return 1;
                 }
               });
@@ -80,6 +86,13 @@ const BreatheScreen = () => {
     animationRef.current.forEach(circle => {
       circle.style.animationPlayState = isAnimating ? 'paused' : 'running';
     });
+    if (audioRef.current) {
+      if (isAnimating) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+    }
   };
 
   const resetAnimation = () => {
@@ -93,6 +106,17 @@ const BreatheScreen = () => {
       circle.className = 'circle';
       circle.style.animationPlayState = 'running'; // Ensure it starts in running state
     });
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+
+  const toggleMute = () => {
+    setIsMuted(prev => !prev);
+    if (audioRef.current) {
+      audioRef.current.muted = !isMuted;
+    }
   };
 
   useEffect(() => {
@@ -111,6 +135,7 @@ const BreatheScreen = () => {
       </Link>
       <div className="scrollable-content">
         <div className="container">
+          <audio ref={audioRef} src={BreatheAudio} autoPlay={false} loop={true} muted={isMuted}></audio>
           <div className="flower">
             {[...Array(6)].map((_, i) => (
               <div
@@ -135,6 +160,12 @@ const BreatheScreen = () => {
               alt="Reset"
               className="button"
               onClick={resetAnimation}
+            />
+            <img
+              src={isMuted ? UnmuteButton : MuteButton}
+              alt={isMuted ? "Unmute" : "Mute"}
+              className="button"
+              onClick={toggleMute}
             />
           </div>
         </div>
