@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Breathe.css';
 import HomeButton from '../assets/components/buttons/hom_button.png';
@@ -16,6 +16,7 @@ const BreatheScreen = () => {
   const [countdown, setCountdown] = useState(5);
   const [instruction, setInstruction] = useState('Press Play to start');
   const [step, setStep] = useState(0);
+  const [repetition, setRepetition] = useState(1);
   const intervalRef = useRef(null);
   const animationRef = useRef([]);
 
@@ -46,6 +47,16 @@ const BreatheScreen = () => {
             animationRef.current.forEach(circle => {
               circle.className = `circle ${animationSteps[nextStep]}`;
             });
+            if (nextStep === 0) {
+              setRepetition((prevRepetition) => {
+                if (prevRepetition <= 5) {
+                  return repetition + 1;
+                } else {
+                  setIsAnimating(false);
+                  return 1;
+                }
+              });
+            }
             return 5;
           } else {
             return prevCountdown - 1;
@@ -77,6 +88,7 @@ const BreatheScreen = () => {
     setStep(0);
     setCountdown(5);
     setInstruction('Press Play to start');
+    setRepetition(1);
     animationRef.current.forEach(circle => {
       circle.className = 'circle';
       circle.style.animationPlayState = 'running'; // Ensure it starts in running state
@@ -110,13 +122,20 @@ const BreatheScreen = () => {
           </div>
           <h1 className="countdown">{countdown}</h1>
           <h2 className="breathe-instruction">{instruction}</h2>
+          <h3 className="repetition-counter">Cycle: {repetition} / 5</h3>
           <div className="button-container">
-            <button className="button-fixed" onClick={toggleAnimation}>
-              {isAnimating ? 'Pause' : 'Play'}
-            </button>
-            <button className="button-fixed" onClick={resetAnimation}>
-              Reset
-            </button>
+            <img
+              src={isAnimating ? PauseButton : PlayButton}
+              alt={isAnimating ? "Pause" : "Play"}
+              className="button"
+              onClick={toggleAnimation}
+            />
+            <img
+              src={RestartButton}
+              alt="Reset"
+              className="button"
+              onClick={resetAnimation}
+            />
           </div>
         </div>
       </div>
