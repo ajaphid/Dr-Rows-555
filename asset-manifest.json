@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dr-Rows-555-OFFICIAL/static/css/main.67a84083.css",
-    "main.js": "/Dr-Rows-555-OFFICIAL/static/js/main.9cb03004.js",
+    "main.css": "/Dr-Rows-555-OFFICIAL/static/css/main.4d16af07.css",
+    "main.js": "/Dr-Rows-555-OFFICIAL/static/js/main.58b64191.js",
     "static/media/DrRows555.mov": "/Dr-Rows-555-OFFICIAL/static/media/DrRows555.a95b1fffdb1849247169.mov",
     "static/media/555audio1.m4a": "/Dr-Rows-555-OFFICIAL/static/media/555audio1.315961dd3f56e1bd2447.m4a",
     "static/media/Maragsâ-Display.otf": "/Dr-Rows-555-OFFICIAL/static/media/Maragsâ-Display.be3bebbe3d2474c7f666.otf",
@@ -10,11 +10,11 @@
     "static/media/HankenGrotesk-Bold.ttf": "/Dr-Rows-555-OFFICIAL/static/media/HankenGrotesk-Bold.a3c57b0d7f757ba9e319.ttf",
     "static/media/Home_Background.png": "/Dr-Rows-555-OFFICIAL/static/media/Home_Background.f82a88f2be4240c1e220.png",
     "index.html": "/Dr-Rows-555-OFFICIAL/index.html",
-    "main.67a84083.css.map": "/Dr-Rows-555-OFFICIAL/static/css/main.67a84083.css.map",
-    "main.9cb03004.js.map": "/Dr-Rows-555-OFFICIAL/static/js/main.9cb03004.js.map"
+    "main.4d16af07.css.map": "/Dr-Rows-555-OFFICIAL/static/css/main.4d16af07.css.map",
+    "main.58b64191.js.map": "/Dr-Rows-555-OFFICIAL/static/js/main.58b64191.js.map"
   },
   "entrypoints": [
-    "static/css/main.67a84083.css",
-    "static/js/main.9cb03004.js"
+    "static/css/main.4d16af07.css",
+    "static/js/main.58b64191.js"
   ]
 }
