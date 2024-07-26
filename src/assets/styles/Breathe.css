@@ -2,42 +2,87 @@
 
 @import './App.css'; /* Import common styles */
 
-.button-container {
-  width: 50%;
+.breathe-tile-container {
+  height: 100vh;
+  margin: 0px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 275px;
+}
+
+.breathe-tile-content {
   display: flex;
   flex-direction: column;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.breathe-instruction {
+  color: #4D2B2B;
+  font-family: 'MARAGSA DISPLAY', sans-serif;
+  text-align: center;
+}
+
+.repetition-counter {
+  color: #5F403E;
+  font-family: 'Hanken Grotesk', sans-serif;
+  /* font-size: 1.2rem; */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .button {
-  background-color: var(--primary-color);
-  color: var(--button-text-color);
-  padding: var(--button-padding);
+  background: none;
   border: none;
-  border-radius: var(--button-radius);
-  margin: 10px 0;
-  width: 80%;
-  max-width: 300px; /* Ensure buttons don't stretch too wide */
-  text-align: center;
-  text-decoration: none;
-  font-size: var(--button-font-size);
-  font-weight: 600;
   cursor: pointer;
+  padding: 0;
+  width: 30px;
+}
+
+#main-button {
+  width: 50px;
+  padding: 10px;
 }
 
 .button-fixed {
-  background-color: var(--primary-color);
-  color: var(--button-text-color);
-  padding: var(--button-padding);
+  background: none;
   border: none;
-  border-radius: var(--button-radius);
-  margin: 10px 0;
-  width: 150px;
-  text-align: center;
-  text-decoration: none;
-  font-size: var(--button-font-size);
-  font-weight: 600;
   cursor: pointer;
+  padding: 0;
+  width: 50px; /* Adjust size as necessary */
+  height: 50px; /* Adjust size as necessary */
+}
+
+.button-pause-play {
+  background-color: #D66660;
+}
+
+.button-volume-reset {
+  background-color: #D08181;
+}
+
+.subtext {
+  color: #4D2B2B;
+  font-family: 'Hanken Grotesk', sans-serif;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .flower {

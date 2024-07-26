@@ -145,29 +145,36 @@ const BreatheScreen = () => {
               />
             ))}
           </div>
-          <h1 className="countdown">{countdown}</h1>
-          <h2 className="breathe-instruction">{instruction}</h2>
-          <h3 className="repetition-counter">Cycle: {repetition} / 5</h3>
-          <div className="button-container">
-            <img
-              src={isAnimating ? PauseButton : PlayButton}
-              alt={isAnimating ? "Pause" : "Play"}
-              className="button"
-              onClick={toggleAnimation}
-            />
-            <img
-              src={RestartButton}
-              alt="Reset"
-              className="button"
-              onClick={resetAnimation}
-            />
-            <img
-              src={isMuted ? UnmuteButton : MuteButton}
-              alt={isMuted ? "Unmute" : "Mute"}
-              className="button"
-              onClick={toggleMute}
-            />
+          <div className="breathe-tile-container">
+            <div className="breathe-tile-content">
+              {/* <h1 className="countdown">{countdown}</h1> */}
+              <h2 className="breathe-instruction">{instruction}</h2>
+              <h3 className="repetition-counter">Cycle: {repetition} / 5</h3>
+              <div className="button-container">
+                <img
+                    src={isMuted ? UnmuteButton : MuteButton}
+                    alt={isMuted ? "Unmute" : "Mute"}
+                    className="button"
+                    onClick={toggleMute}
+                />
+                <img
+                  src={isAnimating ? PauseButton : PlayButton}
+                  alt={isAnimating ? "Pause" : "Play"}
+                  className="button"
+                  id="main-button"
+                  onClick={toggleAnimation}
+                />
+                <img
+                  src={RestartButton}
+                  alt="Reset"
+                  className="button"
+                  onClick={resetAnimation}
+                />
+              </div>
+              <p className='subtext'>Breathe the 555 method.</p>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
