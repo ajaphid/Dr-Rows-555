@@ -1,12 +1,9 @@
-/* BreatheScreen.css */
 
-@import './App.css'; /* Import common styles */
 
 .breathe-tile-container {
-  /* height: 100%; */
   margin: 0px;
   margin-top: 10px;
-  background-color: #f9f9f9;
+  background-color: #fff5e9;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
@@ -15,8 +12,8 @@
   position: absolute;
   left: 0;
   right: 0;
+  bottom: 0;
   top: 40%;
-  min-height: 60%;
 }
 
 .breathe-tile-content {
