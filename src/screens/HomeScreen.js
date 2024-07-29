@@ -22,15 +22,17 @@ const HomeScreen = () => {
           <p className="body-text separated-text">
             Dr. Row's 555 is 5 steps, 5 seconds each, 5 times.
           </p>
-          <button className="button navigation" onClick={() => navigate('/breathe')}>
-            Breathe the 555
-          </button>
-          <button className="button navigation" onClick={() => navigate('/learn')}>
-            Learn the 555
-          </button>
-          <button className="button navigation" onClick={() => navigate('/about')}>
-            About Dr. Row
-          </button>
+          <div className="button-container">
+            <button className="button navigation" onClick={() => navigate('/breathe')}>
+              Breathe the 555
+            </button>
+            <button className="button navigation" onClick={() => navigate('/learn')}>
+              Learn the 555
+            </button>
+            <button className="button navigation" onClick={() => navigate('/about')}>
+              About Dr. Row
+            </button>
+          </div>
         </div>
       </div>
     </div>
