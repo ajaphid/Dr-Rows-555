@@ -14,12 +14,12 @@
   font-style: normal;
 }
 
-/* @font-face {
+@font-face {
   font-family: 'Maragsa Display';
-  src: url('./fonts/Maragsâ/Maragsâ-Display.otf') format('opentype');
+  src: url('./fonts/Maragsâ/Maragsâ-Display.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 /* Global Variables */
 :root {

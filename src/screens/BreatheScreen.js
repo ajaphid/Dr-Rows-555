@@ -73,7 +73,7 @@ const BreatheScreen = () => {
       clearInterval(intervalRef.current);
     }
     return () => clearInterval(intervalRef.current);
-  }, [isAnimating, step, instructions, animationSteps]);
+  }, [isAnimating, step, instructions, animationSteps, repetition]);
 
   const toggleAnimation = () => {
     if (!isAnimating && step === 0 && countdown === 5) {
