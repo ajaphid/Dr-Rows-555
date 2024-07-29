@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Learn.css';
-import TutorialVideo from '../assets/components/videos/DrRows555.mov';
+import TutorialVideo from '../assets/components/videos/DrRows555.mp4';
 import HomeButton from '../assets/components/buttons/hom_button.png';
 
 const LearnScreen = () => {
