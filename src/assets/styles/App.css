@@ -14,12 +14,12 @@
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Maragsa Display';
-  src: url('./fonts/Maragsâ/Maragsâ-Display.otf') format('opentype');
+  src: url('./fonts/Maragsâ/Maragsâ-Display.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 /* Global Variables */
 :root {
@@ -29,20 +29,20 @@
   --background-overlay: rgba(255, 255, 255, 0.8);
   --button-text-color: #FFF;
   --text-color: #6D4C41;
-  --header-font-size: 32px;
-  --subheader-font-size: 24px;
-  --text-font-size: 20px;
-  --button-font-size: 18px;
-  --button-padding: 15px 30px;
-  --button-radius: 5px;
+  --header-font-size: 2rem;
+  --subheader-font-size: 1.5rem;
+  --text-font-size: 1.25rem;
+  --button-font-size: 1rem;
+  --button-padding: 0.9375rem 1.875rem;
+  --button-radius: 0.3125rem;
   --background-color-1: rgba(210, 105, 30, 0.5);
   --background-color-2: rgba(210, 105, 30, 0.7);
   --container-width: 90%;
-  --container-margin-top: 75px;
-  --container-margin-bottom: 150px;
-  --circle-size: 50px;
+  --container-margin-top: 5%;
+  --container-margin-bottom: 10%;
+  --circle-size: 3.125rem;
   --circle-opacity: 0.4;
-  --flower-size: 200px;
+  --flower-size: 12.5rem;
   --animation-duration: 5s;
   --animation-timing-function: ease-in-out;
 }
@@ -81,52 +81,75 @@ body {
   overflow-y: scroll;
   margin: auto;
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .container {
-  width: 90%;
+  width: var(--container-width);
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
   text-align: left; 
-  margin-top: 75px;
-  margin-bottom: 50px;
+  margin-top: var(--container-margin-top);
+  margin-bottom: var(--container-margin-bottom);
 }
 
 .home-button {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 50px; 
-  height: 50px;
+  top: 1.25rem;
+  left: 1.25rem;
+  width: 3.125rem; 
+  height: 3.125rem;
   cursor: pointer;
   z-index: 1000;
 }
 
 .header {
-  font-size: 28px;
+  font-size: var(--header-font-size);
   font-weight: bold;
   color: #5C4036;
   text-align: left;
-  margin: 0px;
-  margin-bottom: 10px;
+  margin: 0;
+  margin-bottom: 0.625rem;
 }
 
 .subheader {
-  font-size: 18px;
+  font-size: var(--subheader-font-size);
   color: #963817;
   text-align: left;
-  margin: 0px;
+  margin: 0;
 }
 
 .body-text {
-  font-size: 16px;
+  font-size: var(--text-font-size);
   color: #5C4036;
   text-align: left;
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
+/* Common Tile Styles */
+.tile-container {
+  margin: 0;
+  margin-top: 0.625rem;
+  background-color:  #fff5e9;
+  border-top-left-radius: 3.125rem;
+  border-top-right-radius: 3.125rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0 1.25rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 40%;
+}
+
+.tile-content {
+  display: flex;
+  flex-direction: column;
+  width: var(--container-width);
+  margin: 1.875rem auto;
+}

@@ -11,12 +11,12 @@ const LearnScreen = () => {
         <img src={HomeButton} alt="Home Button"/>
       </Link>
       <video controls className="video">
-            <source src={TutorialVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <source src={TutorialVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="learn-tile-container">
         <div className="learn-tile-content">
-        <h1 className="header learn-header">Instructions</h1>
+          <h1 className="header learn-header">Instructions</h1>
           <ol className="steps-container">
             <li className="step-text">Inhale for 5 seconds</li>
             <li className="step-text">Hold your breath for 5 seconds</li>
@@ -25,7 +25,6 @@ const LearnScreen = () => {
             <li className="step-text">Relax your breath; breathe normally for 5 seconds</li>
           </ol>
           <p className="body-text">Repeat 5x, or until calm.</p>
-          <br></br><br></br>
         </div>
       </div>
     </div>
