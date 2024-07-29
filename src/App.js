@@ -46,7 +46,7 @@ const ScrollToTopAndChangeBackground = () => {
 
 function App() {
   return (
-    <Router basename="/Dr-Rows-555-OFFICIAL">
+    <Router basename="/">
       <ScrollToTopAndChangeBackground />
       <div className="app-container">
         <Routes>

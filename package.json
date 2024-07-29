@@ -2,7 +2,7 @@
   "name": "dr-rows-555",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ajaphid.github.io/Dr-Rows-555-OFFICIAL/",
+  "homepage": "https://drrows555.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
