@@ -1,7 +1,7 @@
 .learn-tile-container {
   margin: 0px;
   margin-top: 10px;
-  background-color:  #fff5e9;
+  background-color: var(--tile-background-color);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
@@ -42,5 +42,3 @@
   text-align: left;
   justify-content: center;
 }
-
-

@@ -1,4 +1,4 @@
-.home-header{
+.home-header {
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
@@ -24,8 +24,8 @@
   width: 100%;
 }
 
-.navigation{
-  background-color: #D66660;
+.navigation {
+  background-color: var(--primary-color);
   font-size: 18px;
   font-weight: bold;
   border: none;
@@ -33,7 +33,7 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 10px;
-  color: white;
+  color: var(--button-text-color);
   cursor: pointer;
   font-family: 'Hanken Grotesk Bold', sans-serif;
   text-align: center;
