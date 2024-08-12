@@ -5,31 +5,3 @@
   display: block;
   border: 8px solid var(--text-color);
 }
-
-.about-tile-container {
-  margin: 0px;
-  margin-top: 10px;
-  background-color: var(--tile-background-color);
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 0px 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 40%;
-  height: fit-content;
-}
-
-.about-tile-content {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 30px auto;
-}
-
-.about-header {
-  font-family: 'Maragsa Display', serif;
-}

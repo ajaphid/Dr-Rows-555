@@ -5,10 +5,10 @@ import AboutScreen from './screens/AboutScreen';
 import BreatheScreen from './screens/BreatheScreen';
 import LearnScreen from './screens/LearnScreen';
 import './assets/styles/App.css';
-import HomeBackground from './assets/components/backgrounds/Home_Background.png';
-import LearnBackground from './assets/components/backgrounds/Learnthe555_Background.png';
-import BreatheBackground from './assets/components/backgrounds/Learnthe555_Background.png';
-import AboutBackground from './assets/components/backgrounds/AboutDr.Row_BG.png';
+import HomeBackground from './assets/backgrounds/Home_Background.png';
+import LearnBackground from './assets/backgrounds/Learnthe555_Background.png';
+import BreatheBackground from './assets/backgrounds/Learnthe555_Background.png';
+import AboutBackground from './assets/backgrounds/AboutDr.Row_BG.png';
 
 const ScrollToTopAndChangeBackground = () => {
   const { pathname } = useLocation();

@@ -1,26 +1,3 @@
-.breathe-tile-container {
-  margin: 0px;
-  margin-top: 10px;
-  background-color: var(--tile-background-color);
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 0px 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 40%;
-}
-
-.breathe-tile-content {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 30px auto;
-}
-
 .breathe-instruction {
   color: #4D2B2B;
   font-family: 'MARAGSA DISPLAY', sans-serif;

@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Breathe.css';
-import HomeButton from '../assets/components/buttons/hom_button.png';
+import HomeButton from '../assets/buttons//Home_Icon_555.png';
 
-import BreatheAudio from '../assets/components/audios/555audio1.m4a';
+import BreatheAudio from '../assets/audios/555audio1.m4a';
 
-import PauseButton from '../assets/components/buttons/pause_button.png';
-import PlayButton from '../assets/components/buttons/play_button.png';
-import RestartButton from '../assets/components/buttons/restart_button.png';
-import MuteButton from '../assets/components/buttons/volume_up.png';
-import UnmuteButton from '../assets/components/buttons/volume_down.png';
+import PauseButton from '../assets/buttons/pause_button.png';
+import PlayButton from '../assets/buttons/play_button.png';
+import RestartButton from '../assets/buttons/restart_button.png';
+import MuteButton from '../assets/buttons/volume_up.png';
+import UnmuteButton from '../assets/buttons/volume_down.png';
 
 const BreatheScreen = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -146,8 +146,8 @@ const BreatheScreen = () => {
             ))}
           </div>
           {/* <br></br> */}
-          <div className="breathe-tile-container">
-            <div className="breathe-tile-content">
+          <div className="tile-container">
+            <div className="tile-content">
               {/* <h1 className="countdown">{countdown}</h1> */}
               <h2 className="breathe-instruction">{instruction}</h2>
               <h3 className="repetition-counter">Repetition {repetition} / 5</h3>

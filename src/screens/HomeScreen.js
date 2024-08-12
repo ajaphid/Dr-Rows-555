@@ -10,7 +10,7 @@ const HomeScreen = () => {
       <div className="scrollable-content">
         <div className="container">
           <img
-            src={require('../assets/components/images/fixed logo 3.png')}
+            src={require('../assets/images/fixed logo 3.png')}
             alt="Lotus"
             className="header-image"
           />
