@@ -1,54 +1,3 @@
-@font-face {
-  font-family: 'Hanken Grotesk';
-  src: url('./fonts/Hanken_Grotesk/static/HankenGrotesk-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk Bold';
-  src: url('./fonts/Hanken_Grotesk/static/HankenGrotesk-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Maragsa Display';
-  src: url('./fonts/Maragsâ/Maragsâ-Display.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Global Variables */
-:root {
-  --primary-color: #D66660;
-  --secondary-color: #6D4C41;
-  --hold-color: rgb(210, 113, 22);
-  --background-overlay: rgba(255, 255, 255, 0.8);
-  --button-text-color: #FFF;
-  --text-color: #6D4C41;
-  --header-font-color: #5C4036;
-  --subheader-font-color: #963817;
-  --tile-background-color: #fff5e9;
-  --background-color-1: rgba(210, 105, 30, 0.5);
-  --background-color-2: rgba(210, 105, 30, 0.7);
-
-  --header-font-size: 2rem;
-  --subheader-font-size: 1.5rem;
-  --text-font-size: 1.25rem;
-  --button-font-size: 1rem;
-  --button-padding: 0.9375rem 1.875rem;
-  --button-radius: 0.3125rem;
-  --container-width: 90%;
-  --container-margin-top: 5%;
-  --container-margin-bottom: 10%;
-  --circle-size: 3.125rem;
-  --circle-opacity: 0.4;
-  --flower-size: 12.5rem;
-  --animation-duration: 5s;
-  --animation-timing-function: ease-in-out;
-}
-
 html, body {
   height: 100%;
   margin: 0;
@@ -56,8 +5,7 @@ html, body {
   font-family: 'Hanken Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden; 
-  color: var(--text-color);
+  overflow: hidden;
 }
 
 body {
@@ -65,6 +13,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-y: scroll;
+  color: var(--text-color);
 }
 
 .app-container {
@@ -77,21 +26,23 @@ body {
 }
 
 .page-container {
-  width: 100%;
+  width: var(--container-width);
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .scrollable-content {
   overflow-y: scroll;
   margin: auto;
   flex: 1;
-  padding: 1.25rem;
+  padding: var(--rem-20);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .container {
-  width: var(--container-width);
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
@@ -102,10 +53,10 @@ body {
 
 .home-button {
   position: fixed;
-  top: 1.25rem;
-  left: 1.25rem;
-  width: 3.125rem; 
-  height: 3.125rem;
+  top: var(--rem-20);
+  left: var(--rem-20);
+  width: var(--home-button-size); 
+  height: var(--home-button-size);
   cursor: pointer;
   z-index: 1000;
 }
@@ -116,7 +67,7 @@ body {
   color: var(--header-font-color);
   text-align: left;
   margin: 0;
-  margin-bottom: 0.625rem;
+  margin-bottom: var(--header-margin-bottom);
 }
 
 .subheader {
@@ -133,40 +84,41 @@ body {
 }
 
 .main-text {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .separated-text {
-  margin-top: 20px;
+  margin-top: var(--separated-text-margin-top);
 }
 
 .tile-container {
-  margin: 0px;
-  margin-top: 10px;
+  margin: 0;
+  margin-top: var(--tile-container-margin-top);
   background-color: var(--tile-background-color);
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: var(--tile-border-radius-top);
+  border-top-right-radius: var(--tile-border-radius-top);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  padding: 0px 20px;
+  padding: var(--tile-padding);
   position: absolute;
   left: 0;
   right: 0;
-  top: 40%;
-  min-height: 60vh; /* Ensures it fills the viewport height when content is short */
-  height: auto; /* Allows the container to grow with content */
-  overflow: hidden; /* Prevents content from overflowing past the container */
+  top: var(--tile-top-position);
+  min-height: var(--tile-min-height); 
+  height: auto; 
+  overflow: hidden; 
 }
 
 .tile-content {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 30px auto;
-  padding-bottom: 20px; /* Ensure some padding at the bottom for better visual balance */
+  width: var(--tile-content-width);
+  margin: var(--tile-content-margin);
+  padding-bottom: var(--tile-content-padding-bottom); 
 }
 
 .tile-header {
   font-family: 'Maragsa Display', serif;
 }
+
 

@@ -3,7 +3,7 @@
 }
 
 .header-image {
-  width: 150px;
+  width: var(--header-image-width);
   align-self: flex-start;
   clip-path: polygon(0% 10%, 100% 10%, 100% 90%, 0% 90%);
 }
@@ -12,19 +12,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: var(--home-nav-margin-top);
   width: 100%;
 }
 
 .navigation {
   background-color: var(--primary-color);
-  font-size: 18px;
+  font-size: var(--navigation-font-size);
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--navigation-border-radius);
   width: 100%;
-  padding: 20px;
-  margin-bottom: 10px;
+  padding: var(--navigation-padding);
+  margin-bottom: var(--navigation-margin-bottom);
   color: var(--button-text-color);
   cursor: pointer;
   font-family: 'Hanken Grotesk Bold', sans-serif;

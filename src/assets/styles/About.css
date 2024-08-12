@@ -1,7 +1,7 @@
 .headshot {
-  width: 250px;
-  margin: 75px auto;
-  margin-bottom: 20px;
+  max-height: var(--headshot-max-height);
+  margin: var(--headshot-margin-top) auto;
+  margin-bottom: var(--headshot-margin-bottom);
   display: block;
-  border: 8px solid var(--text-color);
+  border: var(--headshot-border-width) solid var(--text-color);
 }

@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+
 import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
 import BreatheScreen from './screens/BreatheScreen';
 import LearnScreen from './screens/LearnScreen';
+
 import './assets/styles/App.css';
+import './assets/styles/Variables.css';
+
 import HomeBackground from './assets/backgrounds/Home_Background.png';
 import LearnBackground from './assets/backgrounds/Learnthe555_Background.png';
 import BreatheBackground from './assets/backgrounds/Learnthe555_Background.png';
