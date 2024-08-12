@@ -8,14 +8,6 @@
   clip-path: polygon(0% 10%, 100% 10%, 100% 90%, 0% 90%);
 }
 
-.main-text {
-  margin-bottom: 0px;
-}
-
-.separated-text {
-  margin-top: 10px;
-}
-
 .home-nav-container {
   display: flex;
   flex-direction: column;

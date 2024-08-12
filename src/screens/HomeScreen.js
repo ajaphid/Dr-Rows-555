@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Home.css';
+import LotusImg from '../assets/images/fixed logo 3.png';
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const HomeScreen = () => {
       <div className="scrollable-content">
         <div className="container">
           <img
-            src={require('../assets/images/fixed logo 3.png')}
+            src={LotusImg}
             alt="Lotus"
             className="header-image"
           />

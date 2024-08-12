@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Breathe.css';
+import '../assets/styles/BreatheAnimation.css';
 import HomeButton from '../assets/buttons//Home_Icon_555.png';
 
 import BreatheAudio from '../assets/audios/555audio1.m4a';

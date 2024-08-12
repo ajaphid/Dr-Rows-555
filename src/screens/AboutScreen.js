@@ -28,7 +28,7 @@ const AboutScreen = () => {
                 Originally from the Philippines and  raised in Southern California, she is a graduate of the University of  Southern California and received her medical training at the University of the East.
               </p>
               <br></br>
-              <h1 className="header about-header">Does she practice the 555 on her own time?</h1>
+              <h1 className="header tile-header">Does she practice the 555 on her own time?</h1>
               <p className="body-text main-text">
                 Yes! Dr. Row loves the 555 and uses it within both the personal and professional spheres of her life. Dr. Row believes in healing mental repair and recovery of the self & finding sustainable ways to relax and find peace. Meditative breathing is a well-loved aspect of Dr. Row’s work and wants to encourage everyone, no matter what, to find ways to re-center during moments of stress.
               </p>
