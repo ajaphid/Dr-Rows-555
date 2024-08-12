@@ -57,6 +57,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden; 
+  color: var(--text-color);
 }
 
 body {
@@ -127,7 +128,6 @@ body {
 
 .body-text {
   font-size: var(--text-font-size);
-  color: var(--header-font-color);
   text-align: left;
   font-family: 'Hanken Grotesk', sans-serif;
 }

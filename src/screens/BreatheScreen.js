@@ -150,7 +150,7 @@ const BreatheScreen = () => {
             <div className="breathe-tile-content">
               {/* <h1 className="countdown">{countdown}</h1> */}
               <h2 className="breathe-instruction">{instruction}</h2>
-              <h3 className="repetition-counter">Cycle: {repetition} / 5</h3>
+              <h3 className="repetition-counter">Repetition {repetition} / 5</h3>
               <div className="button-container">
                 <img
                     src={isMuted ? UnmuteButton : MuteButton}

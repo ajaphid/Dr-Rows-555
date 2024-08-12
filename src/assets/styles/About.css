@@ -3,6 +3,7 @@
   margin: 75px auto;
   margin-bottom: 20px;
   display: block;
+  border: 8px solid var(--text-color);
 }
 
 .about-tile-container {
