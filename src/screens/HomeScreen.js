@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Home.css';
 import LotusImg from '../assets/images/logo.png';
 import BreatheScreen from './BreatheScreen';
+import MoreAbout555 from './MoreAbout555';
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -24,6 +25,8 @@ const HomeScreen = () => {
       <p className="mx-auto underline">
         Click here for written instructions
       </p>
+
+      <MoreAbout555 />
     </div>
   );
 }
