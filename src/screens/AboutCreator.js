@@ -12,7 +12,7 @@ export default function AboutCreator() {
           className="mx-auto border-4 border-darkBrown w-2/3 lg:w-1/2 h-fit"
         />
         <div>
-          <div className="info-header">Who is Dr. Row?</div>
+          <div className="font-semibold text-darkRed text-xl">Who is Dr. Row?</div>
           <p>
             Rowena D. Pingul-Ravano, MD, FAAFP (Dr. Row) is board
             certified by the  American Board of Family Medicine and

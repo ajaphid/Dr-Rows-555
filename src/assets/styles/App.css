@@ -8,7 +8,7 @@
   }
 
   .info-header {
-    @apply font-semibold text-darkRed text-xl;
+    @apply font-semibold text-xl;
   }
 
   h3 {
