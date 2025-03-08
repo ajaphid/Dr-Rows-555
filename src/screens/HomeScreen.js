@@ -4,6 +4,8 @@ import '../assets/styles/Home.css';
 import LotusImg from '../assets/images/logo.png';
 import BreatheScreen from './BreatheScreen';
 import MoreAbout555 from './MoreAbout555';
+import Testimonials from './Testimonials';
+import AboutCreator from './AboutCreator';
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -27,6 +29,10 @@ const HomeScreen = () => {
       </p>
 
       <MoreAbout555 />
+
+      <Testimonials />
+
+      <AboutCreator />
     </div>
   );
 }
