@@ -1,11 +1,23 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Hanken Grotesk', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  h1 {
+    @apply text-3xl font-bold text-center mx-auto;
+  }
+
+  .info-header {
+    @apply font-semibold text-xl;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  html, body {
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
 }
 
 body {
@@ -70,21 +82,10 @@ body {
   margin-bottom: var(--header-margin-bottom);
 }
 
-.subheader {
-  font-size: var(--subheader-font-size);
-  color: var(--subheader-font-color);
-  text-align: left;
-  margin: 0;
-}
-
 .body-text {
   font-size: var(--text-font-size);
   text-align: left;
   font-family: 'Hanken Grotesk', sans-serif;
-}
-
-.main-text {
-  margin-bottom: 0;
 }
 
 .separated-text {
