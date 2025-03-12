@@ -1,4 +1,4 @@
-import DrRowHeadshot from '../assets/images/Dr. Rowena.jpeg';
+import DrRowHeadshot from '../assets/images/dr_row_picture.jpeg';
 
 export default function AboutCreator() {
 
