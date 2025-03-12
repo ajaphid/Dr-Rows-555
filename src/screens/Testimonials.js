@@ -1,8 +1,57 @@
+import { useState, useEffect } from 'react';
+import Papa from 'papaparse';
+
 export default function Testimonials() {
+    const [testimonials, setTestimonials] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch('/testimonials.csv')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load testimonials file');
+                }
+                return response.text();
+            })
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    quoteChar: '"',  // ✅ Handles commas correctly
+                    complete: (result) => {
+                        console.log("Parsed CSV Data:", result.data);  // Debug log
+                        setTestimonials(result.data);
+                        setLoading(false);
+                    }
+                });
+            })
+            .catch(err => {
+                console.error('Error fetching testimonials:', err);
+                setError(err.message);
+                setLoading(false);
+            });
+    }, []);
+
+    const cleanText = (text) => text.replace(/^"+|"+$/g, '').trim();
+
     return (
-        <>
-            <h1 className="mx-auto py-8">What patients say</h1>
-            <p>Testimonials to be implemented</p>
-        </>
-    )
+        <section className="max-w-4xl mx-auto py-8 text-center">
+            <h1 className="text-2xl font-semibold mb-6">What patients say</h1>
+            {loading && <p className="text-gray-500">Loading testimonials...</p>}
+            {error && <p className="text-red-500">{error}</p>}
+            {testimonials.length > 0 ? (
+                <div className="space-y-6">
+                    {testimonials.map((t, index) => (
+                        <div key={index} className="p-4 bg-white shadow-md rounded-lg border border-gray-200">
+                            <p className="italic">{cleanText(t.testimonial)}</p>
+                            <p className="text-right font-semibold mt-2">- {cleanText(t.name)}</p>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                !loading && <p className="text-gray-500">No testimonials available.</p>
+            )}
+        </section>
+    );
 }
