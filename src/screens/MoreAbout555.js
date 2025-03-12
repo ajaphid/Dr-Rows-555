@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Papa from 'papaparse';
 
 export default function MoreAbout555() {
     const [info, setInfo] = useState([]);
@@ -6,17 +7,26 @@ export default function MoreAbout555() {
     const [openIndex, setOpenIndex] = useState(null);
 
     useEffect(() => {
-        fetch('/MoreAbout555.json')
+        fetch('/MoreAbout555.csv')
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Failed to load CSV file');
                 }
-                return response.json();
+                return response.text();
             })
-            .then(jsonData => {
-                setInfo(jsonData);
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    quoteChar: '"',
+                    complete: (result) => {
+                        console.log("Parsed CSV Data:", result.data);  // Debugging
+                        setInfo(result.data);
+                    }
+                });
             })
             .catch(err => {
+                console.error('Error fetching CSV:', err);
                 setError(err.message);
             });
     }, []);
@@ -39,9 +49,10 @@ export default function MoreAbout555() {
                             className="flex justify-between items-center cursor-pointer px-2 py-4"
                             onClick={() => toggleAccordion(index)}
                         >
-                            <div className={`info-header flex-grow ${openIndex === index ? 'text-darkRed' : 'text-darkBrown'}`}>{line.header}</div>
+                            <div className={`info-header flex-grow ${openIndex === index ? 'text-darkRed' : 'text-darkBrown'}`}>
+                                {line.header}
+                            </div>
                             <div className={`transition-all duration-[.6s] ${openIndex === index ? ' rotate-180 text-darkRed' : 'text-darkBrown'}`}>
-                                {/* Chevron down svg from heroicons.com */}
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
