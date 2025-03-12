@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/About.css';
-import DrRowHeadshot from '../assets/images/Dr. Rowena.jpeg';
+import DrRowHeadshot from '../assets/images/dr_row_picture.jpeg';
 import HomeButton from '../assets/buttons//Home_Icon_555.png';
 
 const AboutScreen = () => {
