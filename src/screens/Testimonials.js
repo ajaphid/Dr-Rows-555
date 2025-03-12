@@ -18,9 +18,9 @@ export default function Testimonials() {
                 Papa.parse(csvText, {
                     header: true,
                     skipEmptyLines: true,
-                    quoteChar: '"',  // ✅ Handles commas correctly
+                    quoteChar: '"', 
                     complete: (result) => {
-                        console.log("Parsed CSV Data:", result.data);  // Debug log
+                        console.log("Parsed CSV Data:", result.data);
                         setTestimonials(result.data);
                         setLoading(false);
                     }
