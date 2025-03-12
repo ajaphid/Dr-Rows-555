@@ -1,15 +1,12 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Home.css';
 import LotusImg from '../assets/images/logo.png';
 import BreatheScreen from './BreatheScreen';
 import MoreAbout555 from './MoreAbout555';
 import Testimonials from './Testimonials';
 import AboutCreator from './AboutCreator';
+import GlowPromo from './GlowPromo';
 
 const HomeScreen = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="flex min-h-screen flex-col container mx-auto max-w-5xl px-12 pb-4">
       <div className="flex flex-row items-center">
@@ -24,7 +21,7 @@ const HomeScreen = () => {
 
       <BreatheScreen />
       
-      <p className="mx-auto underline">
+      <p className="mx-auto underline cursor-pointer">
         Click here for written instructions
       </p>
 
@@ -33,6 +30,8 @@ const HomeScreen = () => {
       <Testimonials />
 
       <AboutCreator />
+
+      <GlowPromo />
     </div>
   );
 }
