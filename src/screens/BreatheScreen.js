@@ -6,6 +6,7 @@ import PlayButton from '../assets/buttons/play_button.png';
 import RestartButton from '../assets/buttons/restart_button.png';
 import MuteButton from '../assets/buttons/volume_up.png';
 import UnmuteButton from '../assets/buttons/volume_down.png';
+import BreatheFormPopup from './BreatheFormPopup';
 
 const BreatheScreen = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -14,6 +15,7 @@ const BreatheScreen = () => {
   const [step, setStep] = useState(0);
   const [repetition, setRepetition] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const intervalRef = useRef(null);
   const animationRef = useRef([]);
   const audioRef = useRef(null);
@@ -55,6 +57,7 @@ const BreatheScreen = () => {
                     audioRef.current.pause();
                     audioRef.current.currentTime = 0;
                   }
+                  setShowFeedbackForm(true);
                   return 1;
                 }
               });
@@ -98,6 +101,7 @@ const BreatheScreen = () => {
     setCountdown(5);
     setInstruction('Press Play to start');
     setRepetition(1);
+    setShowFeedbackForm(false);
     animationRef.current.forEach(circle => {
       circle.className = 'circle';
       circle.style.animationPlayState = 'running'; // Ensure it starts in running state
@@ -113,6 +117,10 @@ const BreatheScreen = () => {
     if (audioRef.current) {
       audioRef.current.muted = !isMuted;
     }
+  };
+
+  const handleCloseFeedbackForm = () => {
+    setShowFeedbackForm(false);
   };
 
   useEffect(() => {
@@ -167,6 +175,10 @@ const BreatheScreen = () => {
           </div>
         </div>
       </div>
+      
+      {showFeedbackForm && (
+        <BreatheFormPopup isVisible={showFeedbackForm} onClose={handleCloseFeedbackForm} />
+      )}
     </div>
   );
 };
