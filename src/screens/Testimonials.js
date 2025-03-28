@@ -20,7 +20,6 @@ export default function Testimonials() {
                     skipEmptyLines: true,
                     quoteChar: '"', 
                     complete: (result) => {
-                        console.log("Parsed CSV Data:", result.data);
                         setTestimonials(result.data);
                         setLoading(false);
                     }
@@ -37,15 +36,15 @@ export default function Testimonials() {
 
     return (
         <section className="max-w-4xl mx-auto py-8 text-center">
-            <h1 className="text-2xl font-semibold mb-6">What patients say</h1>
+            <h1 className="mx-auto py-8">What patients say</h1>
             {loading && <p className="text-gray-500">Loading testimonials...</p>}
             {error && <p className="text-red-500">{error}</p>}
             {testimonials.length > 0 ? (
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {testimonials.map((t, index) => (
-                        <div key={index} className="p-4 bg-white shadow-md rounded-lg border border-gray-200">
-                            <p className="italic">{cleanText(t.testimonial)}</p>
-                            <p className="text-right font-semibold mt-2">- {cleanText(t.name)}</p>
+                        <div key={index} className="p-6 bg-offWhite shadow-lg rounded-lg border border-darkBrown">
+                            <p className="italic text-left text-darkBrown">{cleanText(t.testimonial)}</p>
+                            <p className="text-right font-semibold mt-4 text-darkRed">- {cleanText(t.name)}</p>
                         </div>
                     ))}
                 </div>
