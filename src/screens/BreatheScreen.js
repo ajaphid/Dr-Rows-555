@@ -90,6 +90,11 @@ const BreatheScreen = () => {
         audioRef.current.pause();
       } else {
         audioRef.current.play();
+        // Google analytics event listener
+        window.gtag('event', 'play_audio', {
+        'event_category': 'Audio Interaction',
+        'event_label': 'Breathe Screen Audio Play',
+          });
       }
     }
   };
