@@ -20,7 +20,7 @@ const HomeScreen = () => {
       <div className="flex flex-row items-center">
         <img
           src={LotusImg}
-          alt="Lotus"
+          alt="Lotus for mindfullness"
           className="w-16 h-fit"
         />
         <h3>Dr. Row's 555</h3>

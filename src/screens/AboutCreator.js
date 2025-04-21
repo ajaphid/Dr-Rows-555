@@ -8,7 +8,7 @@ export default function AboutCreator() {
       <div className="space-y-12">
         <img
           src={DrRowHeadshot}
-          alt="Headshot"
+          alt="Headshot of Dr.Row, founder of Dr. Row's 555 breathing technique"
           className="mx-auto border-4 border-darkBrown w-2/3 lg:w-1/2 h-fit"
         />
         <div>
