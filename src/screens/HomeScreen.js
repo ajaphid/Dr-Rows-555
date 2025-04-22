@@ -16,19 +16,19 @@ const HomeScreen = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col container mx-auto max-w-5xl px-12 pb-4">
+    <div className="flex min-h-screen flex-col container mx-auto max-w-5xl px-8 pb-4">
       <div className="flex flex-row items-center">
         <img
           src={LotusImg}
           alt="Lotus for mindfullness"
-          className="w-16 h-fit"
+          className="w-16 h-auto"
         />
         <h3>Dr. Row's 555</h3>
       </div>
       <h1 className="mx-auto text-darkRed mt-8 mb-4">Relax, recenter, and restore balance</h1>
 
       <BreatheScreen />
-      
+
       <p className="mx-auto underline cursor-pointer" onClick={togglePopup}>
         Click here for written instructions
       </p>

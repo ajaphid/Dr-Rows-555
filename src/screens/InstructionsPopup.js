@@ -3,7 +3,7 @@ const Popup = ({ isVisible, onClose }) => {
   
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-        <div className="bg-offWhite p-8 rounded shadow-lg relative max-w-md mx-auto">
+        <div className="bg-offWhite p-8 rounded shadow-lg relative max-w-md mx-4">
           <button
             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
             onClick={onClose}
