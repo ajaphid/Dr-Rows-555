@@ -23,7 +23,7 @@ const HomeScreen = () => {
           alt="Lotus for mindfullness"
           className="w-16 h-fit"
         />
-        <h3>Dr. Row's 555</h3>
+        <h3>Dr. Row's 555 Breathing Technique</h3>
       </div>
       <h1 className="mx-auto text-darkRed mt-8 mb-4">Relax, recenter, and restore balance</h1>
 
