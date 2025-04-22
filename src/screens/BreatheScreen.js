@@ -1,16 +1,12 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import '../assets/styles/Breathe.css';
 import '../assets/styles/BreatheAnimation.css';
-import HomeButton from '../assets/buttons//Home_Icon_555.png';
-
 import BreatheAudio from '../assets/audios/555audio1.m4a';
-
 import PauseButton from '../assets/buttons/pause_button.png';
 import PlayButton from '../assets/buttons/play_button.png';
 import RestartButton from '../assets/buttons/restart_button.png';
 import MuteButton from '../assets/buttons/volume_up.png';
 import UnmuteButton from '../assets/buttons/volume_down.png';
+import BreatheFormPopup from './BreatheFormPopup';
 
 const BreatheScreen = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -19,6 +15,7 @@ const BreatheScreen = () => {
   const [step, setStep] = useState(0);
   const [repetition, setRepetition] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const intervalRef = useRef(null);
   const animationRef = useRef([]);
   const audioRef = useRef(null);
@@ -60,6 +57,7 @@ const BreatheScreen = () => {
                     audioRef.current.pause();
                     audioRef.current.currentTime = 0;
                   }
+                  setShowFeedbackForm(true);
                   return 1;
                 }
               });
@@ -92,6 +90,11 @@ const BreatheScreen = () => {
         audioRef.current.pause();
       } else {
         audioRef.current.play();
+        // Google analytics event listener
+        window.gtag('event', 'play_audio', {
+        'event_category': 'Audio Interaction',
+        'event_label': 'Breathe Screen Audio Play',
+          });
       }
     }
   };
@@ -103,6 +106,7 @@ const BreatheScreen = () => {
     setCountdown(5);
     setInstruction('Press Play to start');
     setRepetition(1);
+    setShowFeedbackForm(false);
     animationRef.current.forEach(circle => {
       circle.className = 'circle';
       circle.style.animationPlayState = 'running'; // Ensure it starts in running state
@@ -120,6 +124,10 @@ const BreatheScreen = () => {
     }
   };
 
+  const handleCloseFeedbackForm = () => {
+    setShowFeedbackForm(false);
+  };
+
   useEffect(() => {
     if (step === 0 && countdown === 5 && !isAnimating) {
       animationRef.current.forEach(circle => {
@@ -130,12 +138,9 @@ const BreatheScreen = () => {
   }, [step, countdown, isAnimating]);
 
   return (
-    <div className="page-container">
-      <Link to="/" className="home-button">
-        <img src={HomeButton} alt="Home Button"/>
-      </Link>
-      <div className="scrollable-content">
-        <div className="container">
+    <div className="mx-auto">
+      <div>
+        <div>
           <audio ref={audioRef} src={BreatheAudio} autoPlay={false} loop={true} muted={isMuted}></audio>
           <div className="flower">
             {[...Array(6)].map((_, i) => (
@@ -146,40 +151,39 @@ const BreatheScreen = () => {
               />
             ))}
           </div>
-          {/* <br></br> */}
-          <div className="tile-container">
-            <div className="tile-content">
-              {/* <h1 className="countdown">{countdown}</h1> */}
-              <h2 className="breathe-instruction">{instruction}</h2>
-              <h3 className="repetition-counter">Repetition {repetition} / 5</h3>
-              <div className="button-container">
+          <div>
+            <div>
+              <h2 className="text-center font-['Maragsa_Display']">{instruction}</h2>
+              <h3 className="text-center font-['Hanken_Grotesk'] mb-5">Repetition {repetition} / 5</h3>
+              <div className="flex justify-center items-center gap-4 mb-5">
                 <img
-                    src={isMuted ? UnmuteButton : MuteButton}
-                    alt={isMuted ? "Unmute" : "Mute"}
-                    className="control-button"
-                    onClick={toggleMute}
+                  src={isMuted ? UnmuteButton : MuteButton}
+                  alt={isMuted ? "Unmute" : "Mute"}
+                  className="w-8 cursor-pointer border-none p-0"
+                  onClick={toggleMute}
                 />
                 <img
                   src={isAnimating ? PauseButton : PlayButton}
                   alt={isAnimating ? "Pause" : "Play"}
-                  className="control-button"
+                  className="w-16 p-3 cursor-pointer border-none"
                   id="main-button"
                   onClick={toggleAnimation}
                 />
                 <img
                   src={RestartButton}
                   alt="Reset"
-                  className="control-button"
+                  className="w-8 cursor-pointer border-none p-0"
                   onClick={resetAnimation}
                 />
               </div>
-              <p className='subtext'>Breathe the 555 method.</p>
-              {/* <br></br><br></br> */}
             </div>
           </div>
-          
         </div>
       </div>
+      
+      {showFeedbackForm && (
+        <BreatheFormPopup isVisible={showFeedbackForm} onClose={handleCloseFeedbackForm} />
+      )}
     </div>
   );
 };

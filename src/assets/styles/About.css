@@ -1,7 +1,0 @@
-.headshot {
-  max-height: var(--headshot-max-height);
-  margin: var(--headshot-margin-top) auto;
-  margin-bottom: var(--headshot-margin-bottom);
-  display: block;
-  border: var(--headshot-border-width) solid var(--text-color);
-}

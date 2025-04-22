@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 import HomeScreen from './screens/HomeScreen';
-import AboutScreen from './screens/AboutScreen';
+import AboutCreator from './screens/AboutCreator';
 import BreatheScreen from './screens/BreatheScreen';
 import LearnScreen from './screens/LearnScreen';
 
@@ -55,7 +55,7 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/about" element={<AboutScreen />} />
+          <Route path="/about" element={<AboutCreator />} />
           <Route path="/breathe" element={<BreatheScreen />} />
           <Route path="/learn" element={<LearnScreen />} />
         </Routes>
