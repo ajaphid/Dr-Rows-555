@@ -25,8 +25,8 @@ const Popup = ({ isVisible, onClose }) => {
             Repeat 5x, or until calm.
           </div>
           <a
-            href="/prescription-card.png"
-            download="prescription-card.png"
+            href="/prescription-card.pdf"
+            download="prescription-card.pdf"
             className="absolute bottom-4 left-4 text-darkRed underline text-sm hover:text-darkBrown"
           >
             Click here to download a 555 prescription card
