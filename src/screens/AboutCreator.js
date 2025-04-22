@@ -9,7 +9,7 @@ export default function AboutCreator() {
         <img
           src={DrRowHeadshot}
           alt="Headshot of Dr.Row, founder of Dr. Row's 555 breathing technique"
-          className="mx-auto border-4 border-darkBrown w-2/3 lg:w-1/2 h-fit"
+          className="mx-auto border-4 border-darkBrown w-2/3 lg:w-1/2 h-auto"
         />
         <div>
           <div className="font-semibold text-darkRed text-xl">Who is Dr. Row?</div>
