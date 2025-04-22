@@ -25,7 +25,7 @@ const HomeScreen = () => {
         />
         <h3>Dr. Row's 555</h3>
       </div>
-      <h1 className="mx-auto text-darkRed mt-8 mb-4">Calm down, recenter, and restore balance</h1>
+      <h1 className="mx-auto text-darkRed mt-8 mb-4">Relax, recenter, and restore balance</h1>
 
       <BreatheScreen />
       
