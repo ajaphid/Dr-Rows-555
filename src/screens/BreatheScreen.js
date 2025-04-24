@@ -141,7 +141,7 @@ const BreatheScreen = () => {
     <div className="mx-auto">
       <div>
         <div>
-          <audio ref={audioRef} src={BreatheAudio} autoPlay={false} loop={true} muted={isMuted}></audio>
+          <audio ref={audioRef} src={BreatheAudio} autoPlay={false} muted={isMuted}></audio>
           <div className="flower">
             {[...Array(6)].map((_, i) => (
               <div
