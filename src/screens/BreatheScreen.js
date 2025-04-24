@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import '../assets/styles/BreatheAnimation.css';
-import BreatheAudio from '../assets/audios/555audio1.m4a';
+import BreatheAudio from '../assets/audios/555audio.m4a';
 import PauseButton from '../assets/buttons/pause_button.png';
 import PlayButton from '../assets/buttons/play_button.png';
 import RestartButton from '../assets/buttons/restart_button.png';
