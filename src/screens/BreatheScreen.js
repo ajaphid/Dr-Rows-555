@@ -48,19 +48,19 @@ const BreatheScreen = () => {
               circle.className = `circle ${animationSteps[nextStep]}`;
             });
             if (nextStep === 0) {
-              setRepetition((prevRepetition) => {
-                if (prevRepetition <= 5) {
-                  return repetition + 1;
-                } else {
+              if (repetition >= 5) {
+                setTimeout(() => {
                   setIsAnimating(false);
                   if (audioRef.current) {
                     audioRef.current.pause();
                     audioRef.current.currentTime = 0;
                   }
                   setShowFeedbackForm(true);
-                  return 1;
-                }
-              });
+                  setRepetition(1);
+                }, 0);
+              } else {
+                setRepetition(repetition + 1);
+              }
             }
             return 5;
           } else {
@@ -180,7 +180,7 @@ const BreatheScreen = () => {
           </div>
         </div>
       </div>
-      
+
       {showFeedbackForm && (
         <BreatheFormPopup isVisible={showFeedbackForm} onClose={handleCloseFeedbackForm} />
       )}
