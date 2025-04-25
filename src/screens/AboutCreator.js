@@ -1,10 +1,29 @@
-import DrRowHeadshot from '../assets/images/dr_row_picture.jpeg';
+import { useEffect, useState } from "react";
+import Papa from "papaparse";
+import DrRowHeadshot from "../assets/images/dr_row_picture.jpeg";
 
 export default function AboutCreator() {
+  const [header, setHeader] = useState("");
+  const [section, setSection] = useState("");
+
+  useEffect(() => {
+    fetch("/about_creator.csv")
+      .then((response) => response.text())
+      .then((text) => {
+        Papa.parse(text, {
+          header: true,
+          complete: (results) => {
+            const data = results.data[0];
+            setHeader(data.header);
+            setSection(data.section);
+          },
+        });
+      });
+  }, []);
 
   return (
     <div className="mb-12">
-      <h1 className="mx-auto py-8">About the creator</h1>
+      <h1 className="mx-auto py-8">{header}</h1>
       <div className="space-y-12">
         <img
           src={DrRowHeadshot}
@@ -14,12 +33,12 @@ export default function AboutCreator() {
         <div>
           <div className="font-semibold text-darkRed text-xl">Who is Dr. Row?</div>
           <p>
-            Rowena D. Pingul-Ravano, MD, FAAFP (Dr. Row) is board
-            certified by the  American Board of Family Medicine and
-            is a Fellow of the American  Academy of Family Practice. She
-            currently serves as the Chief of Family Medicine at UPMC Magee
-            Women’s Hospital and is an Assistant Professor at  the University
-            of Pittsburgh.
+            {section.split("\\n").map((line, idx) => (
+              <span key={idx}>
+                {line}
+                <br />
+              </span>
+            ))}
           </p>
         </div>
       </div>
