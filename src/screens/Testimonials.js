@@ -40,7 +40,7 @@ export default function Testimonials() {
             {loading && <p className="text-gray-500">Loading testimonials...</p>}
             {error && <p className="text-red-500">{error}</p>}
             {testimonials.length > 0 ? (
-                <div className="flex flex-col gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {testimonials.map((t, index) => (
                         <div key={index} className="p-6 bg-offWhite shadow-lg rounded-lg border border-darkBrown">
                             <p className="italic text-left text-darkBrown mb-4">{cleanText(t.testimonial)}</p>
